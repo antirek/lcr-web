@@ -1,0 +1,8 @@
+h3 Providers
+    a.ajax#addKeyBtn(ui-sref="providers.create")
+        span.glyphicon.glyphicon-plus-sign
+hr
+.list-group
+    a.list-group-item(ng-repeat="provider in providers" ui-sref="providers.view({id:provider._id})" ui-sref-active="active") {{provider.name}}
+        i.glyphicon.glyphicon-chevron-right.pull-right
+    a.list

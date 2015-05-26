@@ -1,0 +1,25 @@
+h4 Search
+form.form.form-horizontal
+    .form-group
+        .col-sm-7
+            input.form-control(
+            id="search"
+            name="search"
+            type="text"
+            placeholder="Input query"
+            ng-model="query"
+            required
+            )
+        .col-sm-2
+            button.btn(ng-click="search()" ng-disabled="searchInProgress") Search
+h3 Result
+table.table.table-striped.table-condensed.table-hover
+    thead
+        th Provider
+        th Template
+        th Price
+    tbody
+        tr(ng-repeat="row in searchResult")
+            td {{row.provider}}
+            td {{row.template}}
+            td {{row.price}}

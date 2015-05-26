@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title LCR
+        link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+        script(src='/bower_components/jquery/dist/jquery.min.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+        script(src='/bower_components/angular/angular.min.js')
+        script(src='/bower_components/angular-route/angular-route.min.js')
+        script(src='/bower_components/angular-resource/angular-resource.min.js')
+        script(src='/bower_components/angular-ui-router/release/angular-ui-router.min.js')
+        script( src="/public/js/lcr.min.js")
+    body(ng-app="lcr")
+        nav.navbar.navbar-default
+            .navbar-header
+                a.navbar-brand(ui-sref="main") lcr
+            ul.nav.navbar-nav
+                li
+                    a(ui-sref="providers") Providers
+                li
+                    a(ui-sref="providers.search") Search
+        .container
+            .row
+                .col-md-4(ui-view="list")
+                .col-md-8(ui-view="data")
