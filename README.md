@@ -1,8 +1,14 @@
 # lcr-web
-lcr-web
+
+lcr-web is web-interface for lcr-finder
+
+https://github.com/antirek/lcr-finder
 
 
-## Install
+
+## Development
+
+### install
 
 > npm install
 
@@ -11,6 +17,7 @@ lcr-web
 > gulp
 
 
-## Run
+
+### run
 
 > node app.js
