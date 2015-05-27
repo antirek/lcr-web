@@ -3,6 +3,9 @@ module.exports = {
         port: 3000
     },
     web: {
-    	port: 3001
+    	port: 3006
+    },
+    mongo: {
+    	uri: 'mongodb://localhost/lcr'
     }
 };

@@ -10,6 +10,7 @@ html
         script(src='/bower_components/angular-resource/angular-resource.min.js')
         script(src='/bower_components/angular-ui-router/release/angular-ui-router.min.js')
         script( src="/public/js/lcr.min.js")
+            
     body(ng-app="lcr")
         nav.navbar.navbar-default
             .navbar-header
@@ -21,5 +22,5 @@ html
                     a(ui-sref="providers.search") Search
         .container
             .row
-                .col-md-4(ui-view="list")
-                .col-md-8(ui-view="data")
+                .col-md-3(ui-view="list")
+                .col-md-9(ui-view="data")

@@ -1,5 +1,5 @@
 
-Server = (config) ->
+Server = (config, providerModel) ->
     express = require 'express'
     app = express()
     app.set 'views', "#{__dirname}/views"
@@ -13,13 +13,13 @@ Server = (config) ->
     app.get '/partials/:folder/:view', (req, res)->
       res.render "partials/#{req.params.folder}/#{req.params.view}"
 
-    models = require './models/index'
+    # models = require './models/index'
     createRest = require './model'
-    app.use '/providers', createRest models.Provider
+    app.use '/providers', createRest providerModel
 
 
     start: () -> 
-        app.listen 3000
+        app.listen config.port
 
-        
+
 module.exports = Server
