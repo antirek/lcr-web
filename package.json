@@ -1,6 +1,6 @@
 {
   "name": "lcr-web",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "lcr-finder web-interface",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "homepage": "https://github.com/antirek/lcr-web",
   "dependencies": {
     "body-parser": "^1.12.4",
-    "express": "^4.12.4",
+    "express": "^4.12.3",
     "jade": "^1.9.2",
     "mongoose": "^4.0.3"
   },
