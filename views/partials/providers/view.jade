@@ -13,6 +13,11 @@ form.form.form-horizontal(name="providerFrom")
             required
             )
     h4 Directions
+    .form-group
+        .col-sm-7
+            input.form-control(type="file" id="file" ng-model="files" ngf-select)
+        .col-sm-3
+            a.btn.btn-default(ng-click="addFromFile()") Upload
     a.btn.btn-success(ng-click="addDirection()" style="margin-bottom:15px;") Add
     .form-group(ng-repeat="direction in provider.directions")
         .col-sm-5

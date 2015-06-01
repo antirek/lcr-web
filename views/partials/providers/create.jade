@@ -1,5 +1,5 @@
 h3 Add provider
-form.form.form-horizontal(name="providerFrom")
+form.form.form-horizontal(name="providerForm")
     .form-group
         label.col-sm-3.control-label(for="name" ) Name
         .col-sm-7
@@ -12,6 +12,11 @@ form.form.form-horizontal(name="providerFrom")
             required
             )
     h4 Directions
+    .form-group
+        .col-sm-7
+            input.form-control(type="file" id="file" ng-model="files" ngf-select)
+        .col-sm-3
+            a.btn.btn-default(ng-click="addFromFile()") Upload
     a.btn.btn-success(ng-click="addDirection()" style="margin-bottom:15px;") Add
 
     .form-group(ng-repeat="direction in provider.directions")
@@ -33,4 +38,4 @@ form.form.form-horizontal(name="providerFrom")
             button.btn.btn-danger(ng-click="removeDirection($index)")
                 span.glyphicon.glyphicon-remove
     hr
-    button.btn.btn-primary.col-sm-offset-3(ng-click="save()" ng-disabled="providerFrom.$invalid") Save
+    button.btn.btn-primary.col-sm-offset-3(ng-click="save()" ng-disabled="providerForm.$invalid") Save
