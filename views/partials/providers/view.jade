@@ -11,7 +11,12 @@ form.form.form-horizontal(name="providerFrom")
             ng-model="provider.name"
             ng-model-options="{ updateOn: 'blur' }"
             required
-            )
+            )        
+        .col-sm-2
+          a.btn.btn-default(
+            ng-class="{'btn-success': provider.status}"
+            ng-click="switchStatus()"
+            ) Status
     h4 Directions
     .form-group
         .col-sm-7

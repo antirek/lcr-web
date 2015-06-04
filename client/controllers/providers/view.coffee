@@ -18,6 +18,10 @@ angular.module 'lcr'
         template: ''
         price: ''
 
+    $scope.switchStatus = ()->
+      $scope.provider.status = !$scope.provider.status
+      $scope.provider.$save()
+
     $scope.removeDirection = (index)->
       $scope.provider.directions.splice index, 1
 
