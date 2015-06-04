@@ -17,17 +17,17 @@ angular.module 'lcr'
       for index of providers
         query = searchQuery
         provider = providers[index]
-        while query.length > 0
-          for key of provider.directions
-            direction = provider.directions[key]
-            if direction.template is query
-              $scope.searchResult.push
-                provider: provider.name
-                template: direction.template
-                price: direction.price
-              query = ''
+        if(provider.status)
+          while query.length > 0
+            for key of provider.directions
+              direction = provider.directions[key]
+              if direction.template is query
+                $scope.searchResult.push
+                  provider: provider.name
+                  template: direction.template
+                  price: direction.price
+                query = ''
 
-          query = query.slice(0, -1)
+            query = query.slice(0, -1)
       $scope.searchInProgress = false
-
 ]
